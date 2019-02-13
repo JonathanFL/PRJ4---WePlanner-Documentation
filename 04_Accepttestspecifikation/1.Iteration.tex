@@ -1,0 +1,46 @@
+\lstdefinelanguage{Gherkin}{
+  keywords={Nr, S{aa}, Givet, Og},
+  ndkeywords={Egenskab, Scenarie, Baggrund},
+  sensitive=false,
+  comment=[l]{\#},
+  morestring=[b]',
+  morestring=[b]"
+}
+
+\subsubsection{Accepttest for første iteration}
+
+\noindent User stories for operationer (bruger)\newline
+\textbf{\underline{Opret bruger}}
+
+\begin{lstlisting}[language=Gherkin]
+Egenskab: Opret bruger
+    
+    Baggrund:
+        Givet at personen vil oprette en bruger på webapplikationen, har en gyldig email
+        
+	Scenarie: Personen vil oprette en bruger
+		Når personen vil oprette en bruger til webapplikationen
+		S{aa} navigerer personen til knappen "Opret en ny bruger" på hjemmesiden
+		S{aa} trykker personen p{aa} knappen "Opret en ny bruger"
+		Og bruger navigeres til siden hvor der kan oprettes en bruger
+		S{aa} navigerer personen til tekst felterne for at indtaste email og adgangskode
+		S{aa} indtaster personen email og adgangskode
+		Og trykker opret bruger
+\end{lstlisting}
+
+\newline\textbf{\underline{Log ind}}\newline \textbf{Som} bruger\newline \textbf{Vil jeg} gerne kunne logge ind med email og adgangskode,\newline \textbf{For at} kunne få adgang til hjemmesiden og benytte mig af webapplikationen.\newline
+
+\begin{lstlisting}[language=Gherkin]
+Egenskab: Log ind
+    
+    Baggrund:
+        Givet at personen har oprettet en bruger til webapplikationen
+        
+	Scenarie: Personen vil logge ind
+		N{aa}r personen vil logge ind til webapplikationen
+		S{aa} navigerer personen til omr{aa}det for log ind på hjemmesiden
+		S{aa} trykker personen p{aa} tekstboksene for email og adgangskode
+		Og indtaster brugeroplysninger ind i tekstboksene 
+		S{aa} navigerer personen til knappen "Log ind" p{aa} hjemmesiden
+		Og trykker p{aa} knappen "Log ind"
+\end{lstlisting}
