@@ -8,29 +8,16 @@
 \TabPositions{4cm, 6cm, 8cm}
 
 \begin{document}
-
-\includepdf[pages={1}]{Frontmatter/Frontpage1.pdf}
 \frontmatter
 \newpage
-
-
 \listoftodos[Notes]
-\input{Versionshistorik.tex}
+\input{Analyse/versionshistorik.tex}
 \chapter{Begrebsliste}
-\input{Frontmatter/acronymstre}
 \cleardoublepage
 \tableofcontents*
 \mainmatter
-\input{01_Indledning/Indledning.tex}
-
-\input{02_Kravspecifikation/Kravspec.tex}
-\chapter{Forarbejdsanalyse}
+\chapter{Analyse forarbejde}
 \input{Analyse/Forarbejde/Framework_Overvejelser.tex}
-\input{03_Graensefladerogprotokoller/Graensefladerogprotokol.tex}
-\input{04_Accepttestspecifikation/Acceptest.tex}
-\input{05_Arkitektur/Arkitektur.tex}
 
-
-\printbibliography
 
 \end{document}

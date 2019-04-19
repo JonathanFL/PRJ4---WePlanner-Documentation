@@ -1,0 +1,35 @@
+\subsubsection{Valg af Framework til web applikation} 
+
+\noindent Til projektet blev der gjort nogle overvejelser for, hvilket Framework der skal bruges til udførelse af webapplikationen i projektet. Der blev undesøgt nærmere på ASP.NET Web Forms og MVC, da disse var indbyggede Frameworks for web applikationer til visual studio. Begge løsninger kan bruges, hvor hver af dem har deres fordele og ulemper. \newline
+
+\noindent \textbf{\underline{ASP.NET Web Forms}}
+
+\noindent Web Forms frameworket sørger for at man som udvikler kan lave webaplikationer som et event-drevet model. Elementer som skal på webapplikationen kan trækkes og slippes. Funktionaliteten af webappliaktionen udvikles efter code-behind modellen, hvor funktionaliteten af elementerne skrives på en code-behind fil. \newline 
+
+\noindent De primære fordele ved at benytte Web Forms som teknologi er, at det er nemt at kunne starte ud med, da man som udvikler ikke skal vide meget om HTML kode, da det er "drag and drop", med mange prædefinerede elementer.
+Systemet bliver delt op i elementer, som der hver især skal tilknyttes funktionalitet til. \newline 
+
+\noindent Ulemperne ved at benytte Web Forms er, at man ikke bestemmer meget af det HTML kode der bliver skrevet, derfor er der ikke meget kontrol ved det HTML som skrives. \newline
+\noindent Det er også svært at genbruge det kode der er skrevet til webapplikationen, da det netop er til den bestemte webapplikation, og gøres på code-behind stil. \newline
+
+\noindent \textbf{\underline{ASP.NET MVC}}
+
+\noindent MVC står for Model-View-Controller. Forskellen mellem MVC og Web Forms er opdelingen af koden. GUI'en opdeles i to filer, hvor man i view filen har det visuelle som brugeren ser, og i controller filen skrives, hvad der vil ske ved bruger input. Model er business logikken, hvor alt tilgang til data sker, hvor der også kan tilgås en database fra denne fil. Controlleren fungerer som mellemledet for view og model, hvor controlleren manipulerer modellen alt efter bruger input. \newline
+
+\noindent Fordelene ved at benytte MVC, er at der er mere kontrol over udseendet af webapplikationen, da det nu er opdelt mellem en view og controller fil, og det ikke længere er meget rettet mod prædefinerede enheder. \newline 
+
+\noindent Da koden nu er opdelt, kan det blive genbrugt til andre formål som kunne have nytte af det allerede anvendte kode, samtidig bliver det nemmere at teste koden, da det er delt op, og ikke længere i code-behind stil. Der kan opstilles et test-miljø for det. \newline 
+
+\noindent Ulemperne ved at benytte MVC er at der skal være mere kendskab til HTML og CSS kode, da det nu også er mere frit at designe udseendet af hjemmesiden. Det gør det dermed også sværere at lære fra start, da det udseendet ikke længere er drag and drop elementer som kan tages over, men nu skal skrives og kodes præcis som man vil have udseendet til at se ud. \newline
+\noindent MVC er nyere teknologi end Web Forms, hvor at det sandsynligvis ikke er ligeså tilgængeligt at finde materiale om MVC som for Web Forms.\newline
+
+\noindent \textbf{\underline{Hvorfor MVC?}}\newline
+\noindent I dette projekt er der valgt at arbejde videre med MVC Frameworket, hvilket der er flere grunde til.\newline
+\noindent Kontrol over udseendet, og hvad der skal vises for brugeren af webapplikationen, sættes der stor vægt på, hvor der også skal være brugervenlighed og personliggøring af webapplikationen for den enkelte bruger, hvilket gøres lettere da MVC efterlader kontrollen af udseendet for hjemmesiden til udviklerne.\newline
+
+\noindent Genbrug af koden gør det nemmere at arbejde med i projektet, da webapplikationen arbejder med det samme data, og skal følge nogenlunde samme template for hvordan siderne skal se ud, og hvordan de skal personliggøres. \newline 
+
+\noindent Test af webapplikationen sørger for at der undervejs er enkelte dele af webapplikationen som der skal testes og udføres, hvilket i sidste ende sørger for at webapplikationen har større sandsynlighed for at opføre sig som forventet og ikke have uforventede bugs. Ved at have enkelte dele som fungerer efter hensigten undervejs, fungerer dette også som motivator for gruppen og product owner, at kunne følge en fremgang for projektet mod enderesultatet i projektet.\newline
+
+\subsubsection{Endte med ASP.NET Core MVC}
+Efter at gruppen havde arbejdet med ASP.NET MVC, hvor modeller var blevet lavet og database relationer var lavet ud fra modellerne, gik det op for gruppen at den database opsætning der var blevet lavet, var lavet i ASP.NET Core, hvilket ikke umiddelbart var muligt at bruge i Asp.Net  Framework. På dette grundlag valgte gruppen at gå over til ASP.NET Core, for at tage brug af den nyeste teknologi og at direkte kunne tage brug af den viden der blev givet i undervisning om databaser. Databaseundervisningen tog nemlig brug af Entity Framework Core, hvor i mod ASP.NET Framework bare brugte Entity Framework.
