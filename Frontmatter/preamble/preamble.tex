@@ -49,6 +49,8 @@
   morestring=[b]"
 }
 
+\usepackage{svg}
+
 \lstdefinelanguage{VHDL}{
   morekeywords={
     library,use,all,entity,is,port,in,out,end,architecture,of,
@@ -321,7 +323,7 @@ bibencoding=ascii
 \input{Frontmatter/preamble/commands.tex}
 
 % The framed package is used in the example environment
-\usepackage{framed}
+%\usepackage{framed}
 % Show the frame of the page segments for placements
 %\usepackage{showframe}
 % Count chapters, makes it possible to autoupdate number of appendices
@@ -342,12 +344,29 @@ bibencoding=ascii
 %% IF YOU NEED A PACKAGE, PUT UNDER THIS %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\usepackage[subpreambles=true]{standalone}
+\usepackage{import}
+
 \usepackage{tabto}
 \usepackage{textcomp}
 \usepackage{upgreek}
 \usepackage{mathptmx}
 \usepackage{array}
 
+\let\newfloat\relax
+
+\newcommand*{\renameenviron}[1]{%
+  \expandafter\let\csname exam-#1\expandafter\endcsname
+      \csname #1\endcsname
+  \expandafter\let\csname endexam-#1\expandafter\endcsname
+      \csname end#1\endcsname
+  \expandafter\let\csname #1\endcsname\relax
+  \expandafter\let\csname end#1\endcsname\relax
+}
+\renameenviron{framed}
+\renameenviron{shaded}
+\renameenviron{leftbar}
+\renameenviron{snugshade}
 
 \usepackage{circuitikz}%enables electriacls curcits in tikz
 %\usepackage{slashbox} % So two different things can be written in a box i an table

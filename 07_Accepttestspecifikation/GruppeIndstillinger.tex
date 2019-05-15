@@ -1,0 +1,175 @@
+\subsubsection{Gruppe indstillinger}
+
+\textbf{\underline{Valg af tema, baggrund og gruppenavn}}\newline \textbf{Som} owner\newline \textbf{Vil jeg} gerne kunne ændre temaet, baggrunden og gruppenavnet\newline \textbf{For at} den bliver mere personlig og tilpasser sig gruppen. \\\\
+
+\noindent\textbf{\underline{Tilføjelse/fjernelse af brugere}}\newline \textbf{Som} administrator\newline \textbf{Vil jeg} gerne kunne tilføje eller fjerne medlemmer til gruppen,\newline \textbf{For at} det stemmer overens med den fysiske gruppes tilstand. 
+
+\begin{lstlisting}[language=Gherkin]
+Egenskab: Tilfoej bruger
+
+    Baggrund:
+        Givet at personen er administrator i gruppen
+        Og at personen er inde paa gruppens side
+        Og at den bruger som skal tilfoejes er oprettet i databasen
+        Og at brugeren som skal tilfoejes ikke allerede er medlem af gruppen
+        
+    Scenarie: Personen vil tilfoeje et nyt medlem til gruppen
+        Naar Personen vil tilfoeje en bruger til gruppen
+        Saa navigerer personen til knappen "Edit group" paa gruppens side
+        Saa trykker personen paa knappen "Edit group"
+        Og personen navigeres til siden hvor alle gruppe indstillinger er
+        Saa navigerer personen til knappen "Add new member"
+        Saa trykker personen paa knappen "Add new member"
+        Og personen navigeres til et pop-up vindue, hvor det nye medlems brugernavn skal skrives
+        Saa skriver personen brugerens brugernavn i tekstfeltet
+        Saa navigerer personen til knappen "Add"
+        Saa trykker personen paa knappen "Add"
+        Og brugeren bliver tilføjet til personens gruppe.
+
+\end{lstlisting}
+
+\begin{lstlisting}[language=Gherkin]
+Egenskab: Fjern bruger
+
+    Baggrund:
+        Givet at personen er administrator i gruppen
+        Og at personen er inde paa gruppens side
+        Og at den bruger som skal fjernes er medlem af gruppen
+        Og at den brugeren som skal fjernes ikke er owner af gruppen
+        
+    Scenarie: Personen vil fjerne et medlem fra gruppen
+        Naar Personen vil fjerne en bruger fra gruppen
+        Saa navigerer personen til knappen "Edit group" paa gruppens side
+        Saa trykker personen paa knappen "Edit group"
+        Og personen navigeres til siden hvor alle gruppe indstillinger er
+        Saa navigerer personen til knappen "Delete member" som er ud for brugeren navn.
+        Saa trykker personen paa knappen "Delete member"
+        Og personen navigeres til et pop-up vindue, hvor valget skal valideres
+        Saa navigerer personen til knappen "Yes"
+        Saa trykker personen paa knappen "Yes"
+        Og brugeren bliver fjernet fra gruppen.
+
+\end{lstlisting}
+
+\textbf{\underline{Tilføje/fjerne administrator rettigheder}}\newline \textbf{Som} owner\newline \textbf{Vil jeg} gerne kunne tilføje eller fjerne administrator rettigheder til gruppens medlemmer,\newline \textbf{For at} jeg kan kontrollere hvem der har adgang til administrator-funktioner. 
+
+\begin{lstlisting}[language=Gherkin]
+Egenskab: Tilfoej administrator retiigheder til en bruger
+
+    Baggrund:
+        Givet at personen er administrator i gruppen
+        Og at personen er inde paa gruppens side
+        Og at brugeren som skal have administrator rettigheder er medlem af gruppen
+        Og at brugeren som skal have administrator rettigheder ikke allerede har det
+        
+        
+    Scenarie: Personen vil tilfoeje administrator rettigheder til et medlem af gruppen
+        Naar Personen vil tilfoeje administrator rettigheder til en bruger i gruppen
+        Saa navigerer personen til knappen "Edit group" paa gruppens side
+        Saa trykker personen paa knappen "Edit group"
+        Og personen navigeres til siden hvor alle gruppe indstillinger er
+        Saa navigerer personen til checkboksen "Admin" som er ud for brugeren navn.
+        Saa trykker personen paa checkboksen "Admin"
+        Saa navigerer personen til knappen "Save"
+        Saa trykker personen paa knappen "Save"
+        Og brugeren faar tildelt administrator rettigheder til gruppen.
+
+\end{lstlisting}
+
+\begin{lstlisting}[language=Gherkin]
+Egenskab: Fjerne administrator retiigheder til en bruger
+
+    Baggrund:
+        Givet at personen er administrator i gruppen
+        Og at personen er inde paa gruppens side
+        Og at brugeren som skal have fjernet administrator rettigheder er medlem af gruppen
+        Og at brugeren som skal have fjernet administrator rettigheder har dem i forvejen
+        
+        
+    Scenarie: Personen vil fjerne administrator rettigheder fra et medlem af gruppen
+        Naar Personen vil fjerne administrator rettigheder fra en bruger i gruppen
+        Saa navigerer personen til knappen "Edit group" paa gruppens side
+        Saa trykker personen paa knappen "Edit group"
+        Og personen navigeres til siden hvor alle gruppe indstillinger er
+        Saa navigerer personen til checkboksen "Admin" som er ud for brugerens navn.
+        Saa trykker personen paa checkboksen "Admin"
+        Saa navigerer personen til knappen "Save"
+        Saa trykker personen paa knappen "Save"
+        Og brugeren får fjernet administrator rettighederne til gruppen.
+
+\end{lstlisting}
+
+\textbf{\underline{Mulighed for at forlade gruppe}}\newline \textbf{Som} bruger\newline \textbf{Vil jeg} gerne have mulighed for at forlade en gruppe,\newline \textbf{For at} jeg kan forlade gruppen hvis jeg ikke ønsker at være med i den længere.  
+\begin{lstlisting}[language=Gherkin]
+Egenskab: Forlade en gruppe
+
+    Baggrund:
+        Givet at personen er medlem af gruppen
+        Og at personen er inde paa gruppens side
+        
+    Scenarie: Personen vil forlade en gruppe
+        Naar Personen vil forlade en gruppe
+        Saa navigerer personen til knappen "Leave group" paa gruppens side
+        Saa trykker personen paa knappen "Leave group"
+        Og personen navigeres til et pop-up vindue, hvor valget skal valideres
+        Saa navigerer personen til knappen "Yes"
+        Saa trykker personen paa knappen "Yes"
+        Og personen har forladet gruppen.
+
+\end{lstlisting}
+
+\textbf{\underline{Mulighed for at slette gruppe}}\newline \textbf{Som} Owner\newline \textbf{Vil jeg} gerne have mulighed for at slette en gruppe\newline \textbf{For at} jeg kan slette gruppen hvis den ikke bliver brugt længere.
+
+\begin{lstlisting}[language=Gherkin]
+Egenskab: Slet gruppe
+
+    Baggrund:
+        Givet at personen er owner i gruppen
+        Og at personen er inde paa gruppens side
+        
+    Scenarie: Personen vil slette en gruppe
+        Naar Personen vil slette en gruppe
+        Saa navigerer personen til knappen "Edit group" paa gruppens side
+        Saa trykker personen paa knappen "Edit group"
+        Og personen navigeres til siden hvor alle gruppe indstillinger er
+        Saa navigerer personen til knappen "Delete group"
+        Saa trykker personen paa knappen "Delete group"
+        Og personen navigeres til et pop-up vindue, hvor valget skal valideres
+        Saa navigerer personen til knappen "Delete group"
+        Saa trykker personen paa knappen "Delete group"
+        Og personen har slettet gruppen.
+
+\end{lstlisting}
+
+\textbf{\underline{Tilføje/fravælge notifikationer}}\newline \textbf{Som} bruger\newline \textbf{Vil jeg} gerne have mulighed for at tilføje/fravælge notifikationer i appen\newline \textbf{For at} jeg kan bestemme hvilke typer af notifikationer jeg gerne vil se.  \\\\
+
+\textbf{\underline{Mulighed for at tilføje kælenavne}}\newline \textbf{\underline{til medlemmer}}\newline \textbf{Som} administrator\newline \textbf{Vil jeg} gerne have mulighed for at tilføje kælenavne til en eller flere af gruppens medlemmer\newline \textbf{For at} gruppen personliggøres.
+
+\begin{lstlisting}[language=Gherkin]
+Egenskab: Tilfoej kaelenavn til en bruger i en gruppe
+
+    Baggrund:
+        Givet at personen er administrator i gruppen
+        Og at personen er inde paa gruppens side
+        Og at brugeren som skal have et kaelenavn er medlem af gruppen
+        
+    Scenarie: Personen tilfoeje et kaelenavn til et medlem i gruppen
+        Naar Personen vil tilfoeje et kaelenavn til et en bruger i gruppen
+        Saa navigerer personen til knappen "Edit group" paa gruppens side
+        Saa trykker personen paa knappen "Edit group"
+        Og personen navigeres til siden hvor alle gruppe indstillinger er
+        Saa navigerer personen til tekstfeltet under Nickname som er ud for brugerens navn
+        Saa skriver personen et kaelenavn i tekstfeltet
+        Saa navigerer personen til knappen "Save"
+        Saa trykker personen paa knappen "Save"
+        Og brugeren får tildelt et kaelenavn til gruppen.
+
+\end{lstlisting}
+
+\textbf{\underline{Tilføj widget}}\newline \textbf{Som} bruger\newline \textbf{Vil jeg} gerne have mulighed for at tilføje widgets på gruppens side\newline \textbf{For at} jeg kan administrere indholdet på gruppens side og den kan tilpasses til gruppens behov.
+
+
+
+\textbf{\underline{Fjern widget}}\newline \textbf{Som} administrator\newline \textbf{Vil jeg} gerne have mulighed for at fjerne widgets på gruppens side\newline \textbf{For at} jeg kan administrere indholdet på gruppens side så den kan tilpasses til gruppens behov.  \\\\
+
+\textbf{\underline{Mulighed for at videregive owner rettigheder}}\newline \textbf{Som} owner\newline \textbf{Vil jeg} gerne have mulighed for at videre give owner rettighederne\newline \textbf{For at} jeg kan give en anden mulighed for at styre gruppen.  \\\\

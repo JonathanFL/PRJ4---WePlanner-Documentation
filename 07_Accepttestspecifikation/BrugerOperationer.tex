@@ -1,0 +1,156 @@
+\subsubsection{Bruger operationer}
+\noindent \textbf{\underline{Opret bruger}}\newline \textbf{Som} bruger\newline \textbf{Vil jeg} gerne kunne oprette mig som bruger til webappliaktionen med email og adgangskode\newline \textbf{For at} kunne logge ind til hjemmesiden. 
+
+\begin{lstlisting}[language=Gherkin]
+Egenskab: Opret bruger
+    
+    Baggrund:
+        Givet at personen vil oprette en bruger paa webapplikationen, har en gyldig email
+        
+	Scenarie: Personen vil oprette en bruger
+		Naar personen vil oprette en bruger til webapplikationen
+		Saa navigerer personen til knappen "Opret en ny bruger" paa hjemmesiden
+		Saa trykker personen paa knappen "Opret en ny bruger"
+		Og bruger navigeres til siden hvor der kan oprettes en bruger
+		Saa navigerer personen til tekst felterne for at indtaste email & adgangskode
+		Saa indtaster personen email & adgangskode
+		Og trykker opret bruger
+		Saa bliver der oprettet en bruger til personen for webapplikationen, med de registrerede oplysninger
+\end{lstlisting}
+
+\noindent \textbf{\underline{Log ind}}\newline \textbf{Som} bruger\newline \textbf{Vil jeg} gerne kunne logge ind med email og adgangskode,\newline \textbf{For at} kunne få adgang til hjemmesiden og benytte mig af webapplikationen.
+
+\begin{lstlisting}[language=Gherkin]
+Egenskab: Log ind
+
+    Baggrund:
+        Givet at personen har oprettet en bruger til webapplikationen
+        
+	Scenarie: Personen vil logge ind
+		Naar personen vil logge ind til webapplikationen
+		Saa navigerer personen til omraadet for log ind paa hjemmesiden
+		Saa trykker personen paa tekstboksene for email og adgangskode
+		Og indtaster brugeroplysninger 
+		Saa navigerer personen til knappen "Log ind" paa hjemmesiden
+		Og trykker paa knappen "Log ind"
+		Saa bliver brugeren logget ind 
+		Og bliver videresendt til webapplikationen 
+\end{lstlisting}
+
+\noindent\textbf{\underline{Indstil profilbillede }}\newline \textbf{Som} bruger\newline \textbf{Vil jeg} gerne kunne ændre profilbillede,\newline \textbf{For at} webapplikationen bliver mere personlig.
+
+\begin{lstlisting}[language=Gherkin]
+Egenskab: Indstil profilbillede
+
+    Baggrund:
+        Givet at personen har oprettet en bruger til webapplikationen og er logget ind
+        
+    Scenarie: Personen vil aendre profilbillede
+        Naar personen vil aendre profilbillede
+        Saa navigererer og trykker personen sig til brugerindstillinger paa hjemmesiden
+        Saa trykker personen paa profile picture
+        Og trykker saa paa "Vaelg fil"
+        Saa navigerer personen gennem stien og finder et billede
+        Saa trykker personen paa Aabn
+        Og bliver navigeret tilbage til websiden
+        Saa trykker personen paa "Upload Picture"
+        
+
+\end{lstlisting}
+
+\noindent\textbf{\underline{Indstil personligt tema}}\newline \textbf{Som} bruger\newline \textbf{Vil jeg} gerne kunne ændre personligt tema,\newline \textbf{For at} webapplikationen bliver mere personlig.
+
+\begin{lstlisting}[language=Gherkin]
+Egenskab: Indstil personligt tema
+
+    Baggrund:
+        Givat at personen har oprettet en bruger til webappliaktionen og er logget ind
+        
+    Scenarie: Personen vil aendre tema
+        Naar personen vil aendre tema
+        Saa navigeres der til dropdown menuen i topbaren, hvor der staar "Theme"
+        Saa trykker personen paa det oensket tema
+
+\end{lstlisting}
+
+
+\noindent\textbf{\underline{Ændring af navn}}\newline \textbf{Som} bruger\newline \textbf{Vil jeg} gerne have mulighed for at ændre mit eget navn\newline \textbf{For at} jeg har mulighed for tilpasning af personligt data.
+
+\begin{lstlisting}[language=Gherkin]
+Egenskab: Aendring af navn
+
+    Baggrund:
+        Givat at personen har oprettet en bruger til webapplikationen og er logget ind
+        
+    Scenarie: Personen vil aendre navn
+        Naar personen vil aendre navn
+        Saa navigerer og trykker personen til brugerindstillinger i topbaren
+        Og trykker saa paa "profile" undermenuen
+        Saa navigeres personen til profil indstillingerne
+        Saa trykker personen paa tekstboksen under "Nick Name"
+        Og sletter det forhenvaerende navn.
+        Saa indtaster personen det oensket navn
+        Og trykker paa "Save"
+
+\end{lstlisting}
+
+\noindent\textbf{\underline{Ændring af password}}\newline \textbf{Som} bruger\newline \textbf{Vil jeg} gerne have mulighed for at ændre mit eget password\newline \textbf{For at} jeg har mulighed for at opretholde sikkerhed.
+
+\begin{lstlisting}[language=Gherkin]
+Egenskab: Aendring af password
+
+    Baggrund:
+        Givet at personen har oprettet en bruger til webapplikationen og er logget ind
+        
+    Scenarie: Personen vil aendre password
+        Naar personen vil aendre navn
+        Saa navigerer og trykker personen til brugerindstillinger i topbaren
+        Og trykker saa paa "Password" undermenuen
+        Saa navigeres personen til password indstillingerne
+        Saa indtaster personen det gamle password i den foerste tekstboks
+        Og indtaster det nye password i naeste tekstboks
+        Og indtaster det nye password igen i den sidste tekstboks
+        Saa trykker personen paa "Save"
+        
+\end{lstlisting}
+
+\noindent\textbf{\underline{Ændring af e-mail}}\newline \textbf{Som} bruger\newline \textbf{Vil jeg} gerne have mulighed for at ændre min egen e-mail\newline \textbf{For at} jeg har mulighed for tilpasning af kontakt og sikkerhed.
+
+\begin{lstlisting}[language=Gherkin]
+Egenskab: Aendring af e-mail
+
+    Baggrund:
+        Givet at personen har oprettet en bruger til webapplikationen og er logget ind
+        
+    Scenarie: Personen vil aendre e-mail
+        Naar personen vil aendre navn
+        Saa navigerer og trykker personen til brugerindstillinger i topbaren
+        Og trykker paa "Profile"
+        Saa navigeres personen til profil indstilligerne
+        Saa navigerer personen til tekstboksen til e-email
+        Og sletter den tidligere e-mail
+        Saa indtasker personen den nye oensket e-mail
+        Og trykker paa "Save"
+        
+
+\end{lstlisting}
+
+
+\noindent\textbf{\underline{Opret gruppe}}\newline \textbf{Som} bruger\newline \textbf{Vil jeg} gerne kunne oprette en gruppe\newline \textbf{For at} jeg sammen med mit fælleskab kan administrere og planlægge fælles ressourcer og planer mm.
+
+\begin{lstlisting}[language=Gherkin]
+Egenskab: Oprettelse af gruppe
+
+    Baggrund:
+        Givet at personen har oprettet en bruger til webapplikationen og er logget ind
+        
+    Scenarie: Personen vil oprette en gruppe
+        Naar vil oprette en gruppe
+        Saa navigerer og trykker personen paa "Create Group" i venstre navigationsbar
+        Saa navigeres personen til en side for oprettelse af gruppe
+        Saa navigerer og trykker personen paa tekstboksen for Group name
+        Og indtaster det oensket navn
+        Saa navigerer og trykker personen paa "Create"
+        Og personen navigeres til gruppens dashboard
+
+\end{lstlisting}

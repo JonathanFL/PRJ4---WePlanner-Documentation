@@ -1,0 +1,104 @@
+\subsubsection{Kalender}
+
+\noindent \textbf{\underline{Tilføj/fjern begivenheder}}\newline \textbf{Som} bruger\newline \textbf{Vil jeg} gerne kunne tilføje/fjerne begivenhder
+\newline \textbf{For at} kunne koordinere med bofællesskabet. 
+
+\begin{lstlisting}[language=Gherkin]
+Egenskab: Tilfoej begivenhed
+
+    Baggrund:
+        Givet at personen har oprettet en bruger og er logget ind
+        Og at der findes en gruppe for brugeren
+        Og at kalenderen er oprettet i en gruppe som en widget
+        Og at brugeren er medlem af den samme gruppe som kalenderen findes i
+        Og at personen er navigeret til den selvsamme kalender
+        
+    Scenarie: Personen vil tilfoeje en begivenhed
+        Naar personen vil tilfoeje en begivenhed i kalenderen
+        Saa navigerer personen til knappen "Insert event" og trykker på knappen
+        Og brugeren navigeres til siden hvor der kan indsaettes en begivenhed
+        Saa navigerer personen til tekst felterne for at indtaste information omkring begivnheden som skal indsaettes
+        Saa indtaster personen oplysningerne
+        Og navigerer til knappen "Save Event" og trykker på den
+        Saa bliver der oprettet en begivenhed i kalenderen, med de registrerede oplysninger
+        Og brugeren bliver navigeret til kalenderen igen
+
+\end{lstlisting}
+
+\begin{lstlisting}[language=Gherkin]
+Egenskab: Fjern begivenheder
+
+    Baggrund:
+        Givet at personen har oprettet en bruger og er logget ind
+        Og at der findes en gruppe for brugeren
+        Og at kalenderen er oprettet i en gruppe som en widget
+        Og at brugeren er medlem af den samme gruppe som kalenderen findes i
+        Og at personen er navigeret til den selvsamme kalender
+        Og at der er mindst en begivenhed i kalenderen
+        
+    Scenarie: Personen vil fjerne en begivenhed
+        Naar personen vil fjerne en begivenhed fra kalenderen
+        Saa navigerer personen til det event som vedkommenede oensker at fjerne, og trykker på eventet
+        Og personen praesenteres for et pop up vindue til begivenheden
+        Saa navigerer personen til knappen "Remove" for at fjerne begivenheden
+        Og trykker på knappen
+        Saa bliver personen praesenteret for et pop up vindue, hvor brugeren kan konfirmere aktionen
+        Og personen trykker på "ok"
+        Saa bliver begivenheden fjernet fra kalenderen
+
+\end{lstlisting}
+
+\noindent \textbf{\underline{Skift mode}}\newline \textbf{Som} bruger\newline \textbf{Vil jeg} kunne vælge mellem fælles/personlig visning.
+\newline \textbf{For at} kunne overskue hhv. fælles og personlige planer.
+
+\begin{lstlisting}[language=Gherkin]
+Egenskab: Skift 
+
+    Baggrund:
+        Givet at personen har oprettet en bruger og er logget ind
+        Og at der findes en gruppe for brugeren
+        Og at kalenderen er oprettet i en gruppe som en widget
+        Og at brugeren er medlem af den samme gruppe som kalenderen findes i
+        Og at personen er navigeret til den selvsamme kalender
+        
+    Scenarie: xxx
+        Naar xxx
+
+\end{lstlisting}
+
+\noindent \textbf{\underline{Valg af filter}}\newline \textbf{Som} bruger\newline \textbf{Vil jeg} gerne have mulighed for at filtrere begivenheder i kalenderen.
+\newline \textbf{For at} kunne se brugerdefinerede type af begivenheder.
+
+\begin{lstlisting}[language=Gherkin]
+Egenskab: Valg af filter
+
+    Baggrund:
+        Givet at personen har oprettet en bruger og er logget ind
+        Og at der findes en gruppe for brugeren
+        Og at kalenderen er oprettet i en gruppe som en widget
+        Og at brugeren er medlem af den samme gruppe som kalenderen findes i
+        Og at personen er navigeret til den selvsamme kalender 
+        
+    Scenarie: Personen vil filtrere begivenheder fra, saaledes at kun bestemte begivenheder     vises 
+        Naar personen vil vaelge et filter
+        Saa navigerer personen til knappen dropdown menuen ved knappen "Filter", og trykker
+        Saa praesenteres personen for en liste af muligheder for at filtrere i begivenhederne
+        Og personen vaelger og trykker paa en af mulighederne
+        Saa navigerer personen til knappen "Filter" og trykker på knappen
+        Saa viser kalenderen begivenhederne med begivenhedstype som matcher filteret
+
+\end{lstlisting}
+
+\noindent \textbf{\underline{Valg af visning}}\newline \textbf{Som} bruger\newline \textbf{Vil jeg} gerne kunne vælge mellem visning af måned/uge
+\newline \textbf{For at} få overblik af kalenderen.
+
+\begin{lstlisting}[language=Gherkin]
+Egenskab: xxx
+
+    Baggrund:
+        xxx
+        
+    Scenarie: xxx
+        Naar xxx
+
+\end{lstlisting}
